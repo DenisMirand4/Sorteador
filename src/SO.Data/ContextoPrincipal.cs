@@ -1,13 +1,16 @@
-﻿namespace SO.Data
+﻿using Microsoft.EntityFrameworkCore;
+using SO.Domain;
+
+namespace SO.Data
 {
-    //public class ContextoPrincipal : DbContext
-    //{
-    //    public ContextoPrincipal(DbContextOptions<ContextoPrincipal> options) : base(options)
-    //    {
-    //    }
+    public class ContextoPrincipal : DbContext
+    {
+        public ContextoPrincipal(DbContextOptions<ContextoPrincipal> options) : base(options)
+        {
+        }
 
-    //    public DbSet<Cliente> Clientes { get; set; }
-    //}
-    
+        public DbSet<Cliente> Clientes { get; set; }
+    }
 
- }
+
+}

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SO.Services", "src\SO.Services\SO.Services.csproj", "{51A1071F-2119-4FF6-8293-6976AABD4E40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SO.Services", "src\SO.Services\SO.Services.csproj", "{51A1071F-2119-4FF6-8293-6976AABD4E40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SO.Domain", "src\SO.Domain\SO.Domain.csproj", "{49BB6E4F-8A8F-4CCC-9E85-0A370F1B8AD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SO.Domain", "src\SO.Domain\SO.Domain.csproj", "{49BB6E4F-8A8F-4CCC-9E85-0A370F1B8AD4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-Domain", "02-Domain", "{970AE658-4925-456A-A37F-D7B1EA282B83}"
 EndProject
@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-Services", "01-Services"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-Data", "03-Data", "{8ED5F2E5-5755-4476-AA70-615DCA8DE736}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SO.Data", "src\SO.Data\SO.Data.csproj", "{2997808F-4403-4BCF-B375-2BA11E179C4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SO.Data", "src\SO.Data\SO.Data.csproj", "{2997808F-4403-4BCF-B375-2BA11E179C4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
