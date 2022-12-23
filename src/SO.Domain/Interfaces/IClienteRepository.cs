@@ -1,13 +1,13 @@
-﻿using SO.Domain;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
-namespace SO.Data.Interfaces
+namespace SO.Domain.Interfaces
 {
     public interface IClienteRepository
     {
-        Task<IEnumerable<Cliente>> ObterTodos();
-        Task<Cliente> ObterPorId(Guid id);
+        //Task<Cliente> ObterPorEmail(string email);
         Task<Cliente> Adicionar(Cliente cliente);
-        Task<Cliente> Atualizar(Cliente cliente);
-        Task<Cliente> Remover(Guid id);
+        Task<Cliente> Atualizar(string email);
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace SO.Domain
+﻿using System;
+
+namespace SO.Domain
 {
     public class Cliente
     {
@@ -7,5 +9,6 @@
         public string Cpf { get; set; }
         public string Email { get; set; }
         public Guid Id { get; set; }
+        public int Numero { get; set; }
     }
 }

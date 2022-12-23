@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SO.Data.Interfaces;
 using SO.Domain;
+using SO.Domain.Interfaces;
+using System;
+using System.Threading.Tasks;
 
-namespace Sorteador.Controllers
+namespace SO.Services.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -16,15 +18,28 @@ namespace Sorteador.Controllers
             _clienteRepository = clienteRepository;
         }
         
-        [HttpGet]
-        public async Task<IActionResult> CadastrarCliente(Cliente cliente)
+        [HttpPost]
+        [Route("CadastrarCliente")]
+        public async Task<IActionResult> CadastrarCliente(string nome, string telefone, string CPF, string email)
         {
-            return Ok(await _clienteRepository.Adicionar(cliente));
-            
+            var clienteCadastrado = await _clienteRepository.Adicionar(new Cliente
+            {
+                Nome = nome,
+                Telefone = telefone,
+                Cpf = CPF,
+                Email = email,
+                Id = Guid.NewGuid(),
+                Numero = new Random().Next(0, 99999)
+            });
+            return Ok(clienteCadastrado);
+        }
+
+        [HttpPut]
+        [Route("NovoNumero")]
+        public async Task<IActionResult> NovoNumero(string email)
+        {
+            var clienteAtualizado = await _clienteRepository.Atualizar(email);
+            return Ok(clienteAtualizado);
         }
     }
-    
-    
-    
-    
 }
