@@ -18,7 +18,6 @@ namespace SO.Data.Repository
         {
             _contexto = contexto;
         }
-
         public async Task<Cliente> Adicionar(Cliente cliente)
         {
             if (EmailEhValido(cliente.Email) == false || await ObterPorEmail(cliente.Email) != null) { 
